@@ -4,4 +4,4 @@ function toggleOverlay(card) {
   overlay.classList.toggle('pointer-events-none');
   overlay.classList.toggle('opacity-100');
   overlay.classList.toggle('pointer-events-auto');
-}
+} 
