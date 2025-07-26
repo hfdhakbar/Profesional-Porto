@@ -747,17 +747,6 @@ video {
   gap: 2rem;
 }
 
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.appear {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -1293,4 +1282,4 @@ video {
     font-size: 1rem;
     line-height: 1.5rem;
   }
-
+}

@@ -7,22 +7,23 @@ function toggleOverlay(card) {
 } 
 
 document.addEventListener("DOMContentLoaded", function () {
-  const faders = document.querySelectorAll(".fade-in");
+  const animatedElements = document.querySelectorAll(
+    ".fade-in, .slide-in-left, .slide-in-right, .zoom-in"
+  );
 
-  const appearOptions = {
+  const observerOptions = {
     threshold: 0.1,
     rootMargin: "0px 0px -50px 0px"
   };
 
-  const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+  const observer = new IntersectionObserver(function (entries, observer) {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
-      entry.target.classList.add("appear");
+      entry.target.classList.add("animated");
       observer.unobserve(entry.target);
     });
-  }, appearOptions);
+  }, observerOptions);
 
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-  });
+  animatedElements.forEach(el => observer.observe(el));
 });
+
