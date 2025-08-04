@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const animatedElements = document.querySelectorAll(
     ".fade-in, .slide-in-left, .slide-in-right, .zoom-in"
   );
-
+3                                           
   const observerOptions = {
     threshold: 0.1,
     rootMargin: "0px 0px -50px 0px"

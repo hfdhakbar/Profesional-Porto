@@ -6,7 +6,7 @@
     <link href="./css/style.css" rel="stylesheet">
     <title>Portfolio</title>
     <script>
-    document.addEventListener('DOMContentLoaded', () => {
+   document.addEventListener('DOMContentLoaded', () => {
       const elements = document.querySelectorAll('[data-animate-on-scroll]');
 
       const observer = new IntersectionObserver((entries) => {
@@ -20,17 +20,51 @@
 
       elements.forEach(el => observer.observe(el));
     });
-  </script>
-  <style>
-    [data-animate-on-scroll] {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.8s ease-out;
-    }
-    .animate-visible {
-      opacity: 1 !important;
-      transform: translateY(0) !important;
-    }
+    </script>
+    <style>
+      [data-animate-on-scroll] {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.8s ease-out;
+      }
+      .animate-visible {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+      }
+
+      /* Additional animations */
+      .animate-fadeIn {
+        animation: fadeIn 1s ease-out forwards;
+      }
+      .animate-slideInLeft {
+        animation: slideInLeft 1s ease-out forwards;
+      }
+      .animate-slideInRight {
+        animation: slideInRight 1s ease-out forwards;
+      }
+      .animate-zoomIn {
+        animation: zoomIn 0.8s ease-out forwards;
+      }
+
+      @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+
+      @keyframes slideInLeft {
+        0% { transform: translateX(-50px); opacity: 0; }
+        100% { transform: translateX(0); opacity: 1; }
+      }
+
+      @keyframes slideInRight {
+        0% { transform: translateX(50px); opacity: 0; }
+        100% { transform: translateX(0); opacity: 1; }
+      }
+
+      @keyframes zoomIn {
+        0% { transform: scale(0.95); opacity: 0; }
+        100% { transform: scale(1); opacity: 1; }
+      }
   </style>
 </head>
 <body class="font-sans bg-black ">
