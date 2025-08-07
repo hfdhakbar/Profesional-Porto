@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/style.css" rel="stylesheet">
-    <title>Portfolio</title>
+    <title>Portfolio - Muhammad hafidh Akbar</title>
     <script>
    document.addEventListener('DOMContentLoaded', () => {
       const elements = document.querySelectorAll('[data-animate-on-scroll]');
@@ -13,13 +13,14 @@
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('animate-visible');
-            observer.unobserve(entry.target);
+            entry.target.classList.add('opacity-100', 'translate-y-0');
+          entry.target.classList.remove('opacity-0', 'translate-y-10');
           }
         });
       }, { threshold: 0.1 });
-
       elements.forEach(el => observer.observe(el));
     });
+    
     </script>
     <style>
       [data-animate-on-scroll] {
@@ -32,7 +33,6 @@
         transform: translateY(0) !important;
       }
 
-      /* Additional animations */
       .animate-fadeIn {
         animation: fadeIn 1s ease-out forwards;
       }
@@ -67,6 +67,8 @@
       }
   </style>
 </head>
+<script>document.documentElement.classList.add('js')</script>
+
 <body class="font-sans bg-black ">
   <!--navbar-->
     <header class="w-full border-b border-gray-700 py-2 sticky top-0 bg-black animate-fadeIn delay-300 z-50">
@@ -74,11 +76,11 @@
     <h1 class="text-2xl font-bold text-white">Muhammad hafidh Akbar</h1>
     <nav class="text-lg">
         <ul class="flex gap-8 items-center">
-            <li><a href="#Home" class="text-blue-500 font-bold underline p-1">Home</a></li>
-            <li><a href="#About" class="text-gray-400">About me</a></li>
-            <li><a href="#Portfolio" class="text-gray-400">Portfolio</a></li>
+            <li><a href="#Home" class=" text-gray-400 hover:font-bold ">Home</a></li>
+            <li><a href="#About" class="text-gray-400 hover:font-bold ">About me</a></li>
+            <li><a href="#Portfolio" class="text-gray-400 hover:font-bold hover:from-gray-400 hover:to-blue-500">Portfolio</a></li>
             <li>
-              <button class="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-bold py-2 px-6 rounded-full shadow-lg transform transition-all duration-500 ease-in-out hover:scale-110 hover:brightness-110">Contact Me</button>
+              <button class="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white hover:font-semibold py-2 px-6 rounded-full shadow-lg transform transition-all duration-500 ease-in-out hover:scale-110 hover:brightness-110">Contact Me</button>
             </li>
         </ul>
     </nav>
@@ -97,13 +99,13 @@
       </p>
       
   <!-- Social --> 
-<div class="flex  gap-6 flex-wrap mt-6 "data-animate-on-scroll>
-  <button class="p-5 rounded-full backdrop-blur-lg border border-white/10 bg-gradient-to-tr from-black/60 to-black/40 shadow-lg hover:shadow-2xl hover:shadow-white/20 hover:scale-110 hover:rotate-3 active:scale-95 active:rotate-0 transition-all duration-300 ease-out cursor-pointer hover:border-white/30 hover:bg-gradient-to-tr hover:from-white/10 hover:to-black/40 group relative overflow-hidden" >
+<div class="flex gap-6 flex-wrap mt-6 animate-pulse hover:delay-700"data-animate-on-scroll>
+  <button class="p-5 rounded-full backdrop-blur-lg border border-white/10 bg-gradient-to-tr from-purple-300 to-purple-500 shadow-lg hover:shadow-2xl hover:shadow-red-400/20 hover:scale-110 hover:rotate-3 active:scale-95 active:rotate-0 transition-all duration-300 ease-out cursor-pointer hover:border-white/30 hover:bg-gradient-to-tr hover:from-white/10 hover:to-black/40 group relative overflow-hidden" >
     <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"></div>
     <div class="relative z-10">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-7 h-7 fill-current text-white group-hover:text-white/90 transition-colors duration-300">
+      <img src ="asset/image/new-instagram-logo-glyph.png" viewBox="0 0 24 24" class="w-7 h-7 fill-current text-white group-hover:text-white/90 transition-colors duration-300">
         <path d="M5.164 0L.16 18.928L18.836 24L23.84 5.072L5.164 0ZM14.023 15.208L8.792 13.469L10.436 8.152L15.667 9.891L14.023 15.208Z"></path>
-      </svg>
+      </=>
     </div>
   </button>
 
@@ -136,7 +138,7 @@
 </div>
 </div>
     <!---profile pict-->
-    <div class="relative w-[340px] h-[390px] md:w-[320px] md:h-[350px] rounded-2xl overflow-hidden shadow-[0_0_30px_#3b82f6] mr-20 delay-700">
+    <div class="relative w-[340px] h-[390px] md:w-[320px] md:h-[350px] rounded-2xl overflow-hidden shadow-[0_0_30px_#3b82f6] mr-20  delay-[300ms] duration-[600ms] taos:translate-y-[-100%] taos:opacity-0" data-taos-offset="500">
       <div>
         <img src="./asset/image/Profile.jpg" alt="Profile" class="object-cover w-96 h-96 rounded-2xl" />
       </div>
@@ -144,7 +146,7 @@
   </main>
   
   <!--Tools that prove my work-->
-<section class=" text-white px-20 py-10 mb-12 animate-zoomIn">
+<section class=" text-white px-20 py-10 mb-12 animate-zoomIn delay-[300ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0" data-taos-offset="300">
   <div class="text-center">
     <h1 class="text-4xl font-bold text-white mb-8">Tools That Power <span class="text-blue-500">My Work</span></h1>
     <p class="mb-12 text-gray-500">These tools support my workflow in design, frontend development, Create UI/UX, helping me build clean, responsive, and user-focused digital products.</p>
@@ -271,9 +273,10 @@
         </div>
       </div>
     </section>
+    <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
   </body>
-  <script src="./js/main.js"></script>
-
+  
 <!--About ME-->
    <section class="py-16 px-10 bg-slate-950 mt-12">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -334,7 +337,7 @@
             I agree to Fireside <a href="#" class="underline text-white">Terms of Use</a> and <a href="#" class="underline text-white">Privacy Policy</a> *
           </label>
         </div>
-        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-medium px-6 py-2 rounded transition">Submit</button>
+          <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-medium px-6 py-2 rounded transition">Submit</button>
       </form>
     </div>
   </section>

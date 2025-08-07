@@ -1,8 +1,15 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+const plugin = require('tailwindcss/plugin')
+
+module.exports = {
   content: [
     "./public/**/*.html",
-    "./src/**/*.{js,ts,jsx,tsx}"
+    "./src/**/*.{js,ts,jsx,tsx,html}",
+  ],
+  safelist: [
+    '!duration-[0ms]',
+    '!delay-[0ms]',
+    'html.js :where([class*="taos:"]:not(.taos-init))'
   ],
   theme: {
     extend: {
@@ -37,5 +44,7 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('taos/plugin')
+  ],
 }
